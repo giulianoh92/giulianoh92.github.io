@@ -125,6 +125,8 @@
 
 	// Nav Panel.
 
+
+
 		// Toggle.
 			$navPanelToggle = $(
 				'<a href="#navPanel" id="navPanelToggle">Menu</a>'
@@ -195,6 +197,24 @@
 				&&	browser.osVersion < 10)
 					$navPanel
 						.css('transition', 'none');
+		
+
+    // Function to scroll to a target element
+    function scrollToTarget(targetId) {
+        var $target = $('#' + targetId);
+        if ($target.length > 0) {
+            $('html, body').animate({
+                scrollTop: $target.offset().top
+            }, 1000); // Ajusta la duración según necesites (en milisegundos)
+        }
+    }
+
+    // Use scrollToTarget function for your specific links
+    $('.scroll-to').on('click', function(e) {
+        e.preventDefault(); // Evita el comportamiento predeterminado del enlace
+        var targetId = $(this).attr('href').substring(1); // Obtiene el ID del elemento destino sin '#'
+        scrollToTarget(targetId);
+    });
 
 	// Intro.
 		var $intro = $('#intro');

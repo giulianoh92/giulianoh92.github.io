@@ -3787,8 +3787,32 @@ input, select, textarea {
 			}
 
 			#main > .post.featured {
-				text-align: center;
+				display: flex;
+				flex-direction: column; /* Stack items vertically */
+				align-items: center; /* Center items horizontally */
+				text-align: center; /* Center text within the container */
 			}
+			
+			#main > .post.featured .content {
+				display: flex; /* Use flexbox for content alignment */
+				justify-content: center; /* Center content horizontally */
+				align-items: flex-start; /* Align content to the top */
+				margin-top: 20px; /* Add some space between header and content */
+			}
+			
+			#main > .post.featured img {
+				max-width: 100%; /* Ensure image does not exceed container */
+				width: 500px;
+				height: auto; /* Maintain aspect ratio */
+			}
+			
+			#main > .post.featured .content p {
+				max-width: 100%; /* Example: limit paragraph width */
+				text-align: left; /* Align text to the left */
+				padding-left: 100px;
+			}
+			
+			
 
 			@media screen and (max-width: 1280px) {
 
