@@ -3481,8 +3481,9 @@ input, select, textarea {
 				#intro .actions {
 					display: none;
 				}
-
 		}
+
+
 
 /* Header */
 
@@ -3749,6 +3750,7 @@ input, select, textarea {
 
 /* Main */
 
+
 	#main {
 		background-color: #ffffff;
 		position: relative;
@@ -3757,6 +3759,25 @@ input, select, textarea {
 		max-width: 72rem;
 		z-index: 2;
 	}
+		@media (max-width: 768px) {
+			#main > .post.featured .content {
+				flex-direction: column; /* Apila los elementos verticalmente */
+				text-align: center; /* Centra el texto dentro del contenedor */
+				align-items: center; /* Centra los elementos horizontalmente */
+			}
+		
+			#main > .post.featured .content img {
+				max-width: 100%; /* Ajusta el ancho de la imagen al contenedor */
+				width: auto; /* Ajusta automáticamente el ancho de la imagen */
+				margin-bottom: 1em; /* Espacio opcional entre imagen y texto */
+			}
+		
+			#main > .post.featured .content p {
+				padding-left: 0 !important; /* Anula cualquier padding izquierdo */
+				margin-left: 20px; /* Establece un margen izquierdo */
+				margin-top: 0; /* Elimina el margen superior */
+			}
+		}
 
 		#main > * {
 			padding: 4rem 4rem 2rem 4rem ;
