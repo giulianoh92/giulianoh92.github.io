@@ -3830,7 +3830,8 @@ input, select, textarea {
 			#main > .post.featured .content p {
 				max-width: 100%; /* Example: limit paragraph width */
 				text-align: left; /* Align text to the left */
-				padding-left: 100px;
+				padding-left: 150px;
+				padding-right: 150px;
 			}
 			
 			
